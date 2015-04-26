@@ -1,10 +1,10 @@
 package com.aphyr.riemann.client;
 
 import java.io.IOException;
-import java.lang.AutoCloseable;
+
 
 // A common transport interface.
-public interface Transport extends AutoCloseable {
+public interface Transport {
   boolean isConnected();
   void connect() throws IOException;
 

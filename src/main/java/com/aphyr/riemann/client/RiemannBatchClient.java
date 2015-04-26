@@ -30,7 +30,7 @@ package com.aphyr.riemann.client;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.concurrent.LinkedTransferQueue;
+import jsr166y.LinkedTransferQueue;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -58,7 +58,7 @@ public class RiemannBatchClient implements IRiemannClient {
                            throws UnsupportedJVMException {
     this.client = client;
     this.batchSize = batchSize;
-    this.buffer = new java.util.concurrent.LinkedTransferQueue<Write>();
+    this.buffer = new LinkedTransferQueue<Write>();
   }
 
   @Override
